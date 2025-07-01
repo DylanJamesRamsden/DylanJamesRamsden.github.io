@@ -8,10 +8,21 @@ iframe {
     /* box-shadow: 8px 8px var(--pico-secondary-background); */
 }
 
-iframe:hover{
-    scale: 1.05;
+img.with-border {
+    border-radius: 0.5rem; 
+    border-color: var(--pico-contrast-border); 
+    border-width: 0.15rem; 
+    border-style: solid;
 }
 
-img:hover {
-    border-color: var(--pico-primary-focus);
+@keyframes expand {
+  from {scale: 1}
+  to {scale: 1.05}
+}
+
+iframe:hover{
+    border-color: var(--pico-primary-hover-background);
+    animation-name: expand;
+    animation-duration: .15s;
+    animation-fill-mode: forwards;
 }
